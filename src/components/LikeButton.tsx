@@ -101,7 +101,7 @@ export const LikeButton = ({ postId }: Props) => {
 
       return { previousData };
     },
-    onError: (err, variables, context) => {
+    onError: (_err, _variables, context) => {
       // Rollback on error
       queryClient.setQueryData(["votes", postId], context?.previousData);
     },
